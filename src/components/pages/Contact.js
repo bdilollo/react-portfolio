@@ -8,7 +8,13 @@ function Contact() {
     const [errorMessage, setError] = useState('');
 
     const handleBlur = (e) => {
-
+        if(!e.target.value) {
+            setError('*This field is required.')
+        } else {
+            if(errorMessage !== 'Please enter a valid email address.') {
+                setError('');
+            }
+        }
     };
 
     const handleChange = (e) => {
@@ -17,22 +23,28 @@ function Contact() {
                 setName(e.target.value);
                 break;
             case 'contactEmail':
-                if(isEmail(e.target.value)) {
-                    setEmail(e.target.value);
-                    break;
-                } else {
+                setEmail(e.target.value);
+                if(!isEmail(e.target.value) && e.target.value.length > 0) {
                     setError('Please enter a valid email address.')
                     break;
-                }
+                } else {
+                    setError('')
+                    break;
+                };
             case 'contactMessage':
                 setMessage(e.target.value);
+                break;
+            default:
                 break;
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setName('');
+        setEmail('');
+        setMessage('');
+        setError('Thank you for your message!');
     }
 
     return(
@@ -64,6 +76,9 @@ function Contact() {
                     onChange={handleChange}
                 ></input>
                 <p className='error-message'>{errorMessage}</p>
+                <button type="button" onClick={handleSubmit}>
+                    Submit
+                </button>
             </form>
         </div>
     )
