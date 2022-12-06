@@ -31,6 +31,11 @@ export default function PortfolioContainer() {
             <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
             </div>
             {renderPage()}
+            <div className='d-flex flex-column justify-content-center align-items-center bg-dark'>
+                <a href='https://github.com/bdilollo/' alt='github profile' className='nav-link link-secondary'>GitHub</a>
+                <a href='https://www.linkedin.com/in/bradley-dilollo/' alt='LinkedIn profile' className='nav-link link-secondary'>LinkedIn</a>
+                <a href='https://medium.com/@bldilollo' alt='medium profile' className='nav-link link-secondary'>Medium</a>
+            </div>
         </div>
     );
 }
