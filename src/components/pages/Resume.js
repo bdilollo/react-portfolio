@@ -3,8 +3,9 @@ import React from 'react';
 function Resume() {
     return(
         <div>
-            {/* need downloadable resume doc */}
-            <ul className='skills-list'>
+            <h2>Resume</h2>
+            <a href='example_resume.pdf' download>Take a look at my resume!</a>
+            <ul className='skills-list'>Proficiencies:
                 <li>React</li>
                 <li>Node</li>
                 <li>Express</li>
