@@ -5,13 +5,13 @@ function Resume() {
         <div>
             <h2>Resume</h2>
             <a href='example_resume.pdf' download>Take a look at my resume!</a>
-            <ul className='skills-list'>Proficiencies:
-                <li>React</li>
-                <li>Node</li>
-                <li>Express</li>
-                <li>SQL/Sequelize</li>
-                <li>MongoDB/Mongoose</li>
-                <li>REST APIs</li>
+            <ul className='list-group list-group-flush'>Proficiencies:
+                <li className='list-group-item'>React</li>
+                <li className='list-group-item'>Node</li>
+                <li className='list-group-item'>Express</li>
+                <li className='list-group-item'>SQL/Sequelize</li>
+                <li className='list-group-item'>MongoDB/Mongoose</li>
+                <li className='list-group-item'>REST APIs</li>
             </ul>
         </div>
     )

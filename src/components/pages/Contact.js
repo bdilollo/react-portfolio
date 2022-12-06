@@ -50,12 +50,13 @@ function Contact() {
     return(
         <div>
             <h2>Contact</h2>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className="form-group" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="name"
                     value={nameInput}
                     name="contactName"
+                    className='form-control'
                     onBlur={handleBlur}
                     onChange={handleChange}
                 ></input>
@@ -64,6 +65,7 @@ function Contact() {
                     placeholder="email"
                     value={emailInput}
                     name="contactEmail"
+                    className='form-control'
                     onBlur={handleBlur}
                     onChange={handleChange}
                 ></input>
@@ -72,11 +74,12 @@ function Contact() {
                     placeholder="message"
                     value={messageInput}
                     name="contactMessage"
+                    className='form-control'
                     onBlur={handleBlur}
                     onChange={handleChange}
                 ></input>
-                <p className='error-message'>{errorMessage}</p>
-                <button type="button" onClick={handleSubmit}>
+                <p className={errorMessage ? 'alert alert-danger':''}>{errorMessage}</p>
+                <button type="button" className='btn btn-primary' onClick={handleSubmit}>
                     Submit
                 </button>
             </form>

@@ -2,12 +2,13 @@ import React from 'react';
 
 function Nav({ currentPage, handlePageChange }) {
     return(
+        <div>
         <ul className='nav nav-tabs'>
             <li className='nav-item'>
                 <a 
                     href='#about'
                     onClick={() => handlePageChange('About')}
-                    className={currentPage === 'About'? 'nav-link active':'nav-link'}
+                    className={currentPage === 'About'? 'nav-link active':'nav-link link-secondary'}
                 >About
                 </a>
             </li>
@@ -15,7 +16,7 @@ function Nav({ currentPage, handlePageChange }) {
                 <a
                     href='#Portfolio'
                     onClick={() => handlePageChange('Portfolio')}
-                    className={currentPage === 'Portfolio'?'nav-link active':'nav-link'}
+                    className={currentPage === 'Portfolio'?'nav-link active':'nav-link link-secondary'}
                 >Portfolio
                 </a>
             </li>
@@ -23,7 +24,7 @@ function Nav({ currentPage, handlePageChange }) {
                 <a
                     href='#Contact'
                     onClick={() => handlePageChange('Contact')}
-                    className={currentPage === 'Contact'?'nav-link active':'nav-link'}
+                    className={currentPage === 'Contact'?'nav-link active':'nav-link link-secondary'}
                 >Contact
                 </a>
             </li>
@@ -31,11 +32,12 @@ function Nav({ currentPage, handlePageChange }) {
                 <a
                     href='#Resume'
                     onClick={() => handlePageChange('Resume')}
-                    className={currentPage === 'Resume'?'nav-link active':'nav-link'}
+                    className={currentPage === 'Resume'?'nav-link active':'nav-link link-secondary'}
                 >Resume
                 </a>
             </li>
         </ul>
+        </div>
     )
 }
 
